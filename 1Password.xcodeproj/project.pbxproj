@@ -7,18 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F21BAA792B0DF9FE009B09E5 /* LoginscreenUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21BAA782B0DF9FE009B09E5 /* LoginscreenUI.swift */; };
 		F29B92182B04C01A003F3E5F /* _PasswordApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29B92172B04C01A003F3E5F /* _PasswordApp.swift */; };
 		F29B921A2B04C01A003F3E5F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29B92192B04C01A003F3E5F /* ContentView.swift */; };
 		F29B921C2B04C01B003F3E5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F29B921B2B04C01B003F3E5F /* Assets.xcassets */; };
 		F29B921F2B04C01B003F3E5F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F29B921E2B04C01B003F3E5F /* Preview Assets.xcassets */; };
+		F2F16BE42B077A0400A7F2C7 /* PasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F16BE32B077A0400A7F2C7 /* PasswordItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F21BAA782B0DF9FE009B09E5 /* LoginscreenUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginscreenUI.swift; sourceTree = "<group>"; };
 		F29B92142B04C01A003F3E5F /* 1Password.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 1Password.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F29B92172B04C01A003F3E5F /* _PasswordApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _PasswordApp.swift; sourceTree = "<group>"; };
 		F29B92192B04C01A003F3E5F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F29B921B2B04C01B003F3E5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F29B921E2B04C01B003F3E5F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F2F16BE32B077A0400A7F2C7 /* PasswordItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,7 @@
 		F29B920B2B04C01A003F3E5F = {
 			isa = PBXGroup;
 			children = (
+				F2F16BE32B077A0400A7F2C7 /* PasswordItem.swift */,
 				F29B92162B04C01A003F3E5F /* 1Password */,
 				F29B92152B04C01A003F3E5F /* Products */,
 			);
@@ -53,6 +58,7 @@
 			children = (
 				F29B92172B04C01A003F3E5F /* _PasswordApp.swift */,
 				F29B92192B04C01A003F3E5F /* ContentView.swift */,
+				F21BAA782B0DF9FE009B09E5 /* LoginscreenUI.swift */,
 				F29B921B2B04C01B003F3E5F /* Assets.xcassets */,
 				F29B921D2B04C01B003F3E5F /* Preview Content */,
 			);
@@ -138,7 +144,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F29B921A2B04C01A003F3E5F /* ContentView.swift in Sources */,
+				F21BAA792B0DF9FE009B09E5 /* LoginscreenUI.swift in Sources */,
 				F29B92182B04C01A003F3E5F /* _PasswordApp.swift in Sources */,
+				F2F16BE42B077A0400A7F2C7 /* PasswordItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
