@@ -71,6 +71,8 @@ struct LoginscreenUI: View {
                 .background(Color.blue)
                 .cornerRadius(10)
                 .navigationBarHidden(true)
+                
+               
             }
             
         }
@@ -79,9 +81,9 @@ struct LoginscreenUI: View {
     }
     
     func authenticateUser(Username: String, Password: String) {
-        if username.lowercased() == "mario123" {
+        if username.lowercased() == "Mario123" {
             wrongUsername = 0
-            if password.lowercased() == "abc123" {
+            if password.lowercased() == "Abc123" {
                 wrongPassword = 0
                 showingLoginScreen = true
             } else {
@@ -97,3 +99,4 @@ struct LoginscreenUI: View {
 #Preview {
     LoginscreenUI()
 }
+

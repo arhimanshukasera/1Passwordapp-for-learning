@@ -46,6 +46,7 @@ struct Sidebar: View {
                 Label("Archive", systemImage: "archivebox.fill")
                 
                 Label("Recently Deleted", systemImage: "minus.circle.fill")
+                
             }
             
             
@@ -60,19 +61,69 @@ struct Sidebar: View {
 }
 
 struct PrimaryView: View {
+    
+    
+    @State var isProfileExpanded: Bool = true
+    @State var isRecentlyCreatedExpanded: Bool = true
+    @State var subviewHeight : CGFloat = 100
+
+    
+    
     var body: some View {
+      
+   
         
-        Label("Profile", systemImage: "person.crop.circle")
-        
-        Label("Recently Created", systemImage: "arrow.circlepath")
-        
-        
+        List{
+            
+            
+            Label("Profile", systemImage: "person.crop.circle")
+            
+            
+            VStack(alignment: .leading) {
+                 
+                    
+                    Label("Recently Created", systemImage: "arrow.circlepath")
+                        .labelStyle(TitleAndIconLabelStyle())
+                        .frame(width: 200, height: 20)
+                        .padding()
+                    HStack{
+                        
+                        Label("Password 1", image: "r.square.on.square.fill")
+    
+                       Spacer(minLength: 4)
+                        
+                        Label("1Password Account", systemImage: "key.viewfinder")
+                        
+                        Spacer(minLength: 4)
+                        
+                        Label("Mario", systemImage: "person.crop.square.filled.and.at.rectangle")
+                    }
+                }.background(GeometryReader {
+                    Color.clear.preference(key: ViewHeightKey.self,
+                                           value: $0.frame(in: .local).size.height)
+                })
+                .onPreferenceChange(ViewHeightKey.self) { subviewHeight = $0 }
+                .frame(height: isRecentlyCreatedExpanded ? subviewHeight : 30, alignment: .top)
+                .clipped()
+                .frame(maxWidth: .infinity)
+                        .transition(.move(edge: .bottom))
+                        .onTapGesture {
+                            withAnimation(.easeIn(duration: 0.5)) {
+                                isRecentlyCreatedExpanded.toggle()
+                            }
+                        }
+            
+            
+            
+        }.navigationTitle("Home")
+        .navigationBarTitleDisplayMode(.large)
     }
 }
 
-struct Detailview: View {
-    var body: some View {
-        Text("Detail")
+struct ViewHeightKey: PreferenceKey {
+    static var defaultValue: CGFloat { 0 }
+    static func reduce(value: inout Value, nextValue: () -> Value) {
+        value = value + nextValue()
     }
 }
 
